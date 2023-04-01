@@ -2,7 +2,8 @@ const search = document.querySelector('#search');
 const animesContainer = document.querySelector('#card-container');
 const btn = document.querySelector('#btn');
 const searchAnimeDictionary = new Map();
-
+let prevIndex = 0;
+let nextIndex = 0;
 
 //generate seacrh of anime 
 function getUrl(search) {
@@ -92,9 +93,9 @@ async function searchAnimesAndFillContainer(inputRef, buttonRef) {
   }
   
   
-let arrayImage = ['https://static.crunchyroll.com/fms/portrait_poster/426x639/100/png/77ffd9b8-2dfe-4c8f-96e0-2d101858b8a8.webp', 
-  'https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/36508058-53aa-46f3-a662-7d6142c0cf9b.webp', 
-  'https://static.crunchyroll.com/fms/portrait_poster/426x639/100/png/f8f0bb22-5a49-49c6-ae9d-5a1efbaaac4f.webp'
+let arrayImage = ['https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/36508058-53aa-46f3-a662-7d6142c0cf9b.webp', 
+  'https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/bfe10344-df8b-49c7-b426-f2f0ba97dcbe.webp', 
+  'https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/f5a97fd9-605f-4805-9dac-3ec5475ba950.webp'
  ]
 
 
@@ -111,8 +112,6 @@ function prevSlide() {
     });
    slider.setAttribute("src",arrayImage[prevIndex]);  
 }
-
-
 function nextSlide() {
   arrayImage.forEach((item , index)=>{
     if(slider.getAttribute("src") == item)
