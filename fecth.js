@@ -5,7 +5,7 @@ const searchAnimeDictionary = new Map();
 let prevIndex = 0;
 let nextIndex = 0;
 
-//generate seacrh of anime 
+//generate search of anime 
 function getUrl(search) {
     return `https://api.jikan.moe/v4/anime?q=${search}&sfw`
   }
